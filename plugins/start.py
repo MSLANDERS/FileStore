@@ -66,8 +66,8 @@ async def start_command(client: Client, message: Message):
                 await update_verify_status(id, verify_token=token, link="")
                 link = await get_shortlink(SHORTLINK_URL, SHORTLINK_API, f'https://telegram.dog/{client.username}?start=verify_{token}')
                 btn = [
-                    [InlineKeyboardButton("• ᴏᴘᴇɴ ʟɪɴᴋ •", url=link)],
-                    [InlineKeyboardButton('• ʜᴏᴡ ᴛᴏ ᴏᴘᴇɴ ʟɪɴᴋ •', url=TUT_VID)]
+                    [InlineKeyboardButton("𝗢𝗣𝗘𝗡 𝗟𝗜𝗡𝗞", url=link)],
+                    [InlineKeyboardButton('𝗛𝗢𝗪 𝗧𝗢 𝗩𝗘𝗥𝗜𝗙𝗬', url=TUT_VID)]
                 ]
                 return await message.reply(
                     f"<b>Your token has expired. Please refresh your token to continue.\n\nToken Timeout: {get_exp_time(VERIFY_EXPIRE)}\n\nWhat is the token?\n\nThis is an ads token. Passing one ad allows you to use the bot for {get_exp_time(VERIFY_EXPIRE)}</b>",
@@ -156,7 +156,7 @@ async def start_command(client: Client, message: Message):
                     else None
                 )
                 keyboard = InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("ɢᴇᴛ ғɪʟᴇ ᴀɢᴀɪɴ!", url=reload_url)]]
+                    [[InlineKeyboardButton("📁 𝗚𝗘𝗧 𝗙𝗜𝗟𝗘 𝗔𝗚𝗔𝗜𝗡 📁", url=reload_url)]]
                 ) if reload_url else None
 
                 await notification_msg.edit(
@@ -168,11 +168,11 @@ async def start_command(client: Client, message: Message):
     else:
         reply_markup = InlineKeyboardMarkup(
             [
-                    [InlineKeyboardButton("• ᴍᴏʀᴇ ᴄʜᴀɴɴᴇʟs •", url="https://t.me/Nova_Flix/50")],
+                    [InlineKeyboardButton("⚜️ Mᴏʀᴇ Cʜᴀɴɴᴇʟs", url="https://t.me/mslanders")],
 
     [
-                    InlineKeyboardButton("• ᴀʙᴏᴜᴛ", callback_data = "about"),
-                    InlineKeyboardButton('ʜᴇʟᴘ •', callback_data = "help")
+                    InlineKeyboardButton("👨‍💻 Aʙᴏᴜᴛ", callback_data = "about"),
+                    InlineKeyboardButton('🆘 Hᴇʟᴘ', callback_data = "help")
 
     ]
             ]
@@ -205,18 +205,18 @@ async def not_joined(client: Client, message: Message):
     # Check if the first and second channels are both set
     if FORCE_SUB_CHANNEL1 and FORCE_SUB_CHANNEL2:
         buttons.append([
-            InlineKeyboardButton(text="• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink1),
-            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ •", url=client.invitelink2),
+            InlineKeyboardButton(text="📢 Jᴏɪɴ Cʜᴀɴɴᴇʟ", url=client.invitelink1),
+            InlineKeyboardButton(text="📣 Jᴏɪɴ Cʜᴀɴɴᴇʟ", url=client.invitelink2),
         ])
     # Check if only the first channel is set
     elif FORCE_SUB_CHANNEL1:
         buttons.append([
-            InlineKeyboardButton(text="• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ•", url=client.invitelink1)
+            InlineKeyboardButton(text="📢 Jᴏɪɴ Cʜᴀɴɴᴇʟ•", url=client.invitelink1)
         ])
     # Check if only the second channel is set
     elif FORCE_SUB_CHANNEL2:
         buttons.append([
-            InlineKeyboardButton(text="• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ•", url=client.invitelink2)
+            InlineKeyboardButton(text="📣 Jᴏɪɴ Cʜᴀɴɴᴇʟ", url=client.invitelink2)
         ])
 
     # Check if the third and fourth channels are set
