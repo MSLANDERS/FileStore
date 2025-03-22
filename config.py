@@ -49,7 +49,7 @@ TOKEN = True if os.environ.get('TOKEN', "False") == "True" else False
 SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "")
 SHORTLINK_API = os.environ.get("SHORTLINK_API", "")
 VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 600)) # Add time in seconds
-IS_VERIFY = os.environ.get("IS_VERIFY", "True")
+IS_VERIFY = os.environ.get("IS_VERIFY", "False")
 TUT_VID = os.environ.get("TUT_VID","https://t.me/mslanders")
 
 
@@ -70,7 +70,7 @@ except ValueError:
 FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "𝗛𝗘𝗟𝗟𝗢 {first}\n\n<b>❖ 𝗬𝗢𝗨 𝗛𝗔𝗩𝗘 𝗡𝗢𝗧 𝗝𝗢𝗜𝗡𝗘𝗗 𝗢𝗨𝗥 𝗨𝗣𝗗𝗔𝗧𝗘 𝗖𝗛𝗔𝗡𝗡𝗘𝗟.\n❖ 𝗣𝗟𝗘𝗔𝗦𝗘 𝗖𝗟𝗜𝗖𝗞 𝗢𝗡 𝗕𝗘𝗟𝗢𝗪 𝗕𝗨𝗧𝗧𝗢𝗡.\n❖ 𝗔𝗡𝗗 𝗘𝗡𝗦𝗨𝗥𝗘 𝗧𝗛𝗔𝗧 𝗬𝗢𝗨 𝗝𝗢𝗜𝗡 𝗢𝗨𝗥 𝗖𝗛𝗔𝗡𝗡𝗘𝗟.\n❖ 𝗧𝗛𝗘𝗡 𝗖𝗟𝗜𝗖𝗞 𝗢𝗡 𝗧𝗥𝗬 𝗔𝗚𝗔𝗜𝗡 𝗕𝗨𝗧𝗧𝗢𝗡.\n\n❖ आपने हमारे 𝗨𝗣𝗗𝗔𝗧𝗘 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 को जॉइन नहीं किया है।\n❖ कृपया नीचे दिये गए बटन पर क्लिक करें।\n❖ और सुनिश्चित करें कि आपने चैनल जॉइन किया है।\n❖ इसके बाद, कृपया फिर से प्रयास करें।</b>")
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
-CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "")
+CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "By : @MSLANDERS")
 
 #set True if you want to prevent users from forwarding files from bot
 PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "False") == "True" else False
