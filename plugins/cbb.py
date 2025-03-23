@@ -12,12 +12,15 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             text=HELP_TXT.format(first=query.from_user.first_name),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='start'),
-                        InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data='close')
-                    ]
-                ]
+                [[
+                    InlineKeyboardButton("☸️ ʙᴀᴄᴋᴜᴘ", url="https://t.me/mslanders"),
+                    InlineKeyboardButton("🎞 ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ", url="https://t.me/msrequest_group")
+                ],[
+                    InlineKeyboardButton("👨‍💻 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ", url="https://t.me/mslanders_help")
+                ],[
+                    InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='start'),
+                    InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data='close')
+                ]]
             )
         )
     elif data == "about":
