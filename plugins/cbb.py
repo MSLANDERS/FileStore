@@ -13,13 +13,14 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [[
-                    InlineKeyboardButton("☸️ ʙᴀᴄᴋᴜᴘ", url="https://t.me/mslanders"),
-                    InlineKeyboardButton("🎞 ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ", url="https://t.me/msrequest_group")
+                    InlineKeyboardButton("☸️ Bᴀᴄᴋᴜᴘ", url="https://t.me/mslanders"),
+                    InlineKeyboardButton("🎞 Mᴏᴠɪᴇ Gʀᴏᴜᴘ", url="https://t.me/msrequest_group")
                 ],[
-                    InlineKeyboardButton("👨‍💻 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ", url="https://t.me/mslanders_help")
+                    InlineKeyboardButton("👨‍💻 Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ", url="https://t.me/mslanders_help"),
+                    InlineKeyboardButton("☎ Cᴏɴᴛᴀᴄᴛ Oᴡɴᴇʀ", url="https://t.me/mslanderstalk_bot")
                 ],[
-                    InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='start'),
-                    InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data='close')
+                    InlineKeyboardButton('Hᴏᴍᴇ 🪔', callback_data='start'),
+                    InlineKeyboardButton("Cʟᴏꜱᴇ ⛔", callback_data='close')
                 ]]
             )
         )
@@ -29,8 +30,8 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='start'),
-                     InlineKeyboardButton('ᴄʟᴏꜱᴇ', callback_data='close')]
+                    [InlineKeyboardButton('Hᴏᴍᴇ 🪔', callback_data='start'),
+                     InlineKeyboardButton('Cʟᴏꜱᴇ ⛔', callback_data='close')]
                 ]
             )
         )
@@ -38,10 +39,14 @@ async def cb_handler(client: Bot, query: CallbackQuery):
         await query.message.edit_text(
             text=START_MSG.format(first=query.from_user.first_name),
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("ʜᴇʟᴘ", callback_data='help'),
-                 InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data='about')]
-            ])
+            reply_markup=InlineKeyboardMarkup(
+                [[
+                    InlineKeyboardButton("✭ Jᴏɪɴ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ ✭", url="https://t.me/mslanders")
+                ],[
+                    InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ 🍁", callback_data='help'),
+                    InlineKeyboardButton("Aʙᴏᴜᴛ 💌", callback_data='about')
+                ]]
+            )
         )
     
     elif data == "close":
