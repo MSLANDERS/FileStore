@@ -50,7 +50,7 @@ FORCE_SUB_CHANNEL4 = int(os.environ.get("FORCE_SUB_CHANNEL4", "0"))#put 0 to dis
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 START_PIC = os.environ.get("START_PIC", "https://i.ibb.co/8gwQ9PYx/x.jpg")
-FORCE_PIC = os.environ.get("FORCE_PIC", "https://i.imghippo.com/files/oUyy1541rKc.jpg")
+FORCE_PIC = os.environ.get("FORCE_PIC", "https://i.ibb.co/PswDsjg7/x.jpg")
 
 # Turn this feature on or off using True or False put value inside  ""
 # TRUE for yes FALSE if no 
@@ -91,7 +91,7 @@ BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
 USER_REPLY_TEXT = "ʙᴀᴋᴋᴀ ! ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴍʏ ꜱᴇɴᴘᴀɪ!!"
 
 ADMINS.append(OWNER_ID)
-ADMINS.append(6317211079)
+ADMINS.append(7861606722)
 
 LOG_FILE_NAME = "filesharingbot.txt"
 
