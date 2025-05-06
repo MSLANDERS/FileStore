@@ -13,12 +13,12 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             text=SUPPORTUS_TXT.format(first=query.from_user.first_name),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton('🪔 Hᴏᴍᴇ', callback_data='start'),
-                 InlineKeyboardButton('⛔ Cʟᴏꜱᴇ', callback_data='close')],
                 [InlineKeyboardButton("☸️ Bᴀᴄᴋᴜᴘ", url="https://t.me/MSLANDERS"),
                  InlineKeyboardButton("🎞 Mᴏᴠɪᴇ Gʀᴏᴜᴘ", url="https://t.me/MSREQUEST_GROUP")],
                 [InlineKeyboardButton("👨‍💻 Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ", url="https://t.me/MSLANDERS_HELP"),
-                 InlineKeyboardButton("☎ Cᴏɴᴛᴀᴄᴛ Oᴡɴᴇʀ", url="https://t.me/MSLANDERSTALK_BOT")]
+                 InlineKeyboardButton("☎ Cᴏɴᴛᴀᴄᴛ Oᴡɴᴇʀ", url="https://t.me/MSLANDERSTALK_BOT")],
+                [InlineKeyboardButton('🪔 Hᴏᴍᴇ', callback_data='start'),
+                 InlineKeyboardButton('⛔ Cʟᴏꜱᴇ', callback_data='close')]
             ])
         )
 
