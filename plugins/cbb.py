@@ -10,11 +10,15 @@ async def cb_handler(client: Bot, query: CallbackQuery):
 
     if data == "help":
         await query.message.edit_text(
-            text=HELP_TXT.format(first=query.from_user.first_name),
+            text=SUPPORTUS_TXT.format(first=query.from_user.first_name),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([
                 [InlineKeyboardButton('🪔 Hᴏᴍᴇ', callback_data='start'),
-                 InlineKeyboardButton("⛔ Cʟᴏꜱᴇ", callback_data='close')]
+                 InlineKeyboardButton('⛔ Cʟᴏꜱᴇ', callback_data='close')],
+                [InlineKeyboardButton("☸️ Bᴀᴄᴋᴜᴘ", url="https://t.me/MSLANDERS"),
+                 InlineKeyboardButton("🎞 Mᴏᴠɪᴇ Gʀᴏᴜᴘ", url="https://t.me/MSREQUEST_GROUP")],
+                [InlineKeyboardButton("👨‍💻 Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ", url="https://t.me/MSLANDERS_HELP"),
+                 InlineKeyboardButton("☎ Cᴏɴᴛᴀᴄᴛ Oᴡɴᴇʀ", url="https://t.me/MSLANDERSTALK_BOT")]
             ])
         )
 
@@ -33,7 +37,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             text=START_MSG.format(first=query.from_user.first_name),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("🙋🏻‍♂️ Hᴇʟᴘ", callback_data='help'),
+                [InlineKeyboardButton("🍁 Sᴜᴘᴘᴏʀᴛ", callback_data='help'),
                  InlineKeyboardButton("💌 Aʙᴏᴜᴛ", callback_data='about')]
             ])
         )
